@@ -62,12 +62,40 @@
                         <p class="text-primary">PLANTA</p>
                         <span class="material-symbols-outlined">potted_plant</span>
                     </div>
+                    
+                    <!-- Exibe o nome da planta e permite edição -->
+                    <span class="text-primary font-weight-bold" onclick="enableEdit()">
+                        <span id="plant-name-display">Nome da Planta</span>
+                    </span>
+                    
+                    <!-- Campo de entrada para edição -->
+                    <input type="text" placeholder="Digite o novo nome da planta" id="plant-name-input" value="Nome da Planta" onblur="saveEdit()" style="display:none;">
                 </div>
+                
+
+                <div class="card">
+                    <div class="card-inner">
+                        <p class="text-primary">UMIDADE</p>
+                        <span class="material-icons-outlined">water_drop</span>
+                    </div>
+                    <span class="text-primary font-wight-bold">Status</span>
+                </div>
+
+            </div>
+
+            <div class="charts">
+                <div class="charts-card">
+                    <p class="chart-title">Gráfico de Umidade do Solo</p>
+                    <div id="line-chart"></div>
+                </div>
+
             </div>
         </main>
-
-
     </div>
+
+    <!---ApexCharts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/4.0.0/apexcharts.min.js"></script>
+    
     <script src="js/scripts.js"></script>
 </body>
 </html>
